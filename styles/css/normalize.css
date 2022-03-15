@@ -353,6 +353,10 @@ template {
 
 /* reset */
 
+*{
+  margin:0;
+}
+
 ul {
   list-style: none;
 }
@@ -361,6 +365,3 @@ h2,h3 {
   font-size: inherit;
 }
 
-figure {
-  margin:0;
-}
