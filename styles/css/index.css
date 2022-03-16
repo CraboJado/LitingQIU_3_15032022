@@ -7,8 +7,35 @@ body {
 }
 
 .logo,
-.title {
+.footer-title {
   font-family: "Shrikhand", cursive;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: #fff;
+  background-color: #353535;
+  padding: 12px 0 35px 24px;
+}
+.footer-title {
+  font-size: 18px;
+}
+.footer-navbar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-navbar .nav-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 10px;
+}
+.footer-navbar .nav-list a {
+  display: flex;
+  gap: 12px;
 }
 
 .header {

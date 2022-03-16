@@ -1,0 +1,33 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+    color:#fff;
+    background-color:#353535;
+    padding:12px 0 35px 24px;
+
+    &-title {
+        font-size: 18px;
+    }
+
+    @at-root &-navbar {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .nav-list {
+            display: flex;
+            flex-direction: column;
+            padding:0;
+            gap: 10px;
+        }
+
+        .nav-list a {
+            display: flex;
+            gap:12px;
+        }
+
+    }
+
+
+}
