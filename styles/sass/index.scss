@@ -75,7 +75,7 @@
 
         h2 {
             font-size: 18px;
-            padding-left: 21px;
+            padding-left: 20px;
         }
 
         .navbar-list {
@@ -123,6 +123,84 @@
     
 }
 
-.rest img {
-    width: 100%;
-}
+
+/************* Section Restaurants ************/
+
+ .rest {
+     display: flex;
+     flex-direction: column;
+     gap:26px;
+     background-color:#f6f6f6;
+     margin-top: 63px;
+     padding:58px 0;
+   
+     h2{
+         font-size: 18px;
+         padding-left: 20px;
+     }
+
+     @at-root &-list{
+         display: flex;
+         flex-direction: column;
+         gap:17px;
+         padding:0 20px;
+
+
+         &-item a {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            position: relative;
+            border-radius: 15px;
+            background-color: #fff;
+         }
+
+         &-item img {
+             width:100%;
+             object-fit: cover;
+             height: 175px;
+             border-radius: 15px 15px 0 0;
+         }
+
+         &-info-wrap {
+             display: flex;
+             justify-content: space-between;
+             padding:0 25px 0 12px;
+         }
+
+         &-info {
+             display: flex;
+             flex-direction: column;
+             gap:5px;
+         }
+
+         &-likes {
+            font-size: 20px;
+            position: relative;
+
+            .like {
+                opacity: 0;
+            }
+
+            .like-stroke {
+                position: absolute;
+                left: 0;
+            }
+         }
+        
+         .newTag {
+            font-size: 12px;
+            padding:6px 14px;
+            background-color: variable.$third-color;
+            position: absolute;
+            right: 12px;
+            top:12px;
+            color: darken(variable.$third-color,40);
+            font-weight: bold;
+            border-radius: 3px;
+
+        }
+     }
+ }
+
+
