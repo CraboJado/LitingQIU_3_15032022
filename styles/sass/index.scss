@@ -30,3 +30,99 @@
         box-shadow: inset 0px 1px 4px rgba(0,0,0,.2);
     }
 }
+
+/************ Section Intro **************/
+.Intro {
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+
+    @at-root &-discover {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:22px;
+        padding:45px 0;
+        background-color: #f6f6f6;
+        text-align: center;
+
+        h2 {
+            font-size: 20px;
+            max-width: 230px;
+        }
+
+        h3 {
+            display: flex;
+            font-size: 14px;
+            white-space: pre-line;
+            font-weight: normal;
+        }
+
+        a {
+            padding:12px 18px;
+            border-radius: 20px;
+            font-size: 14px;
+            background-image: linear-gradient(variable.$secondary-color,variable.$primary-color);
+            color: #fff;
+        }
+    }
+
+    @at-root &-fonctioning {
+        display: flex;
+        flex-direction: column;
+        gap:30px;
+
+        h2 {
+            font-size: 18px;
+            padding-left: 21px;
+        }
+
+        .navbar-list {
+
+            display:flex;
+            flex-direction: column;
+            gap:16px;
+            padding:0 18px 0 33px;
+            font-size: 14px;
+
+            &-item a {
+                display: flex;
+                position: relative;
+                justify-content: space-around;
+                height: 72px;
+                align-items: center;
+                background-color: #f6f6f6;
+                border-radius: 15px;
+            }
+
+            &-item span {
+                position: absolute;
+                width: 25px;
+                height:25px;
+                line-height: 25px;
+                text-align: center;
+                border-radius: 50%;
+                background-color:variable.$primary-color;
+                color: #fff;
+                left: -12px;
+            }
+
+            &-item i {
+                flex:1;
+                text-align: center;
+            }
+
+            &-item h3 {
+                flex:4;
+            }
+        }
+
+    }
+
+    
+}
+
+.rest img {
+    width: 100%;
+}

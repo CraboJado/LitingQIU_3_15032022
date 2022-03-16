@@ -35,3 +35,85 @@ body {
   background-color: #eaeaea;
   box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.2);
 }
+
+/************ Section Intro **************/
+.Intro {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.Intro-discover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  padding: 45px 0;
+  background-color: #f6f6f6;
+  text-align: center;
+}
+.Intro-discover h2 {
+  font-size: 20px;
+  max-width: 230px;
+}
+.Intro-discover h3 {
+  display: flex;
+  font-size: 14px;
+  white-space: pre-line;
+  font-weight: normal;
+}
+.Intro-discover a {
+  padding: 12px 18px;
+  border-radius: 20px;
+  font-size: 14px;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  color: #fff;
+}
+
+.Intro-fonctioning {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.Intro-fonctioning h2 {
+  font-size: 18px;
+  padding-left: 21px;
+}
+.Intro-fonctioning .navbar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 18px 0 33px;
+  font-size: 14px;
+}
+.Intro-fonctioning .navbar-list-item a {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  height: 72px;
+  align-items: center;
+  background-color: #f6f6f6;
+  border-radius: 15px;
+}
+.Intro-fonctioning .navbar-list-item span {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: #fff;
+  left: -12px;
+}
+.Intro-fonctioning .navbar-list-item i {
+  flex: 1;
+  text-align: center;
+}
+.Intro-fonctioning .navbar-list-item h3 {
+  flex: 4;
+}
+
+.rest img {
+  width: 100%;
+}
