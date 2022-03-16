@@ -1,18 +1,20 @@
 @use "./partials/base";
-@use "./partials/variable";
+@use "./partials/var";
 @use "./partials/mixin";
-@use "./partials/footer";
 
+/************* Header **************/
 .header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap:3px;
 
     @at-root &-logo {
         width: 100%;
         display: flex;
         justify-content: center;
         padding:17px 0;
+        box-shadow: 0px 3px 12px 0px rgb(0 0 0 / 20%);
 
         img {
             width: 162px;
@@ -27,7 +29,7 @@
         gap: 16px;
         padding:16px 0;
         background-color: #eaeaea;
-        box-shadow: inset 0px 1px 4px rgba(0,0,0,.2);
+        
     }
 }
 
@@ -44,7 +46,7 @@
         align-items: center;
         gap:22px;
         padding:45px 0;
-        background-color: #f6f6f6;
+        background-color: var.$bcg-color;
         text-align: center;
 
         h2 {
@@ -60,11 +62,19 @@
         }
 
         a {
-            padding:12px 18px;
-            border-radius: 20px;
+            padding:15px 20px;
+            border-radius: 25px;
             font-size: 14px;
-            background-image: linear-gradient(variable.$secondary-color,variable.$primary-color);
+            background: linear-gradient(var.$secondary-color,var.$primary-color);
             color: #fff;
+            @include mixin.shadow;
+            @include mixin.transition;
+
+            &:hover{
+                box-shadow: 0px 3px 7px 2px rgba(0,0,0,0.2);
+                background: linear-gradient(lighten(var.$secondary-color,5),lighten(var.$primary-color,5));
+            }
+           
         }
     }
 
@@ -79,7 +89,6 @@
         }
 
         .navbar-list {
-
             display:flex;
             flex-direction: column;
             gap:16px;
@@ -92,8 +101,19 @@
                 justify-content: space-around;
                 height: 72px;
                 align-items: center;
-                background-color: #f6f6f6;
+                background-color: var.$bcg-color;
                 border-radius: 15px;
+                @include mixin.shadow;
+                @include mixin.transition;
+                
+                &:hover{
+                    background-color: lighten(var.$primary-color, 35);
+                    
+                    i {
+                        color:var.$primary-color;
+                    }
+                }
+                
             }
 
             &-item span {
@@ -103,7 +123,7 @@
                 line-height: 25px;
                 text-align: center;
                 border-radius: 50%;
-                background-color:variable.$primary-color;
+                background-color:var.$primary-color;
                 color: #fff;
                 left: -12px;
             }
@@ -111,16 +131,14 @@
             &-item i {
                 flex:1;
                 text-align: center;
+                @include mixin.transition;
             }
 
             &-item h3 {
                 flex:4;
             }
         }
-
     }
-
-    
 }
 
 
@@ -130,7 +148,7 @@
      display: flex;
      flex-direction: column;
      gap:26px;
-     background-color:#f6f6f6;
+     background-color:var.$bcg-color;
      margin-top: 63px;
      padding:58px 0;
    
@@ -153,6 +171,7 @@
             position: relative;
             border-radius: 15px;
             background-color: #fff;
+            @include mixin.shadow;
          }
 
          &-item img {
@@ -165,7 +184,7 @@
          &-info-wrap {
              display: flex;
              justify-content: space-between;
-             padding:0 25px 0 12px;
+             padding:0 25px 11px 12px;
          }
 
          &-info {
@@ -177,32 +196,51 @@
          &-likes {
             font-size: 20px;
             position: relative;
+            height: 20px;
+            background-clip:padding-box;
+
+            &:hover{
+
+                .like {
+                    opacity: 1;
+                }
+
+                .like-stroke {
+                    opacity: 0;
+                }
+            }
 
             .like {
                 opacity: 0;
+                background: linear-gradient(to right,var.$secondary-color,var.$primary-color);
+                background-clip: text;
+                -webkit-text-fill-color:transparent;
+                @include mixin.transition(.5s);
             }
 
             .like-stroke {
                 position: absolute;
                 left: 0;
+                @include mixin.transition(.5s);
             }
-         }
+        }
         
          .newTag {
             font-size: 12px;
             padding:6px 14px;
-            background-color: variable.$third-color;
+            background-color: var.$third-color;
             position: absolute;
             right: 12px;
             top:12px;
-            color: darken(variable.$third-color,40);
+            color: darken(var.$third-color,40);
             font-weight: bold;
             border-radius: 3px;
-
+            @include mixin.shadow;
         }
      }
  }
 
+/************* footer ***************/
+@include mixin.footer;
  
-
 

@@ -11,43 +11,19 @@ body {
   font-family: "Shrikhand", cursive;
 }
 
-.footer {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  color: #fff;
-  background-color: #353535;
-  padding: 12px 0 35px 24px;
-}
-.footer-title {
-  font-size: 18px;
-}
-.footer-navbar {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.footer-navbar .nav-list {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  gap: 10px;
-}
-.footer-navbar .nav-list a {
-  display: flex;
-  gap: 12px;
-}
-
+/************* Header **************/
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 3px;
 }
 .header-logo {
   width: 100%;
   display: flex;
   justify-content: center;
   padding: 17px 0;
+  box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.2);
 }
 .header-logo img {
   width: 162px;
@@ -60,7 +36,6 @@ body {
   gap: 16px;
   padding: 16px 0;
   background-color: #eaeaea;
-  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 /************ Section Intro **************/
@@ -90,11 +65,17 @@ body {
   font-weight: normal;
 }
 .Intro-discover a {
-  padding: 12px 18px;
-  border-radius: 20px;
+  padding: 15px 20px;
+  border-radius: 25px;
   font-size: 14px;
-  background-image: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(#FF79DA, #9356DC);
   color: #fff;
+  box-shadow: 0px 4px 7px 2px rgba(0, 0, 0, 0.1);
+  transition: all 1.5s;
+}
+.Intro-discover a:hover {
+  box-shadow: 0px 3px 7px 2px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(#ff93e1, #a16be0);
 }
 
 .Intro-fonctioning {
@@ -121,6 +102,14 @@ body {
   align-items: center;
   background-color: #f6f6f6;
   border-radius: 15px;
+  box-shadow: 0px 4px 7px 2px rgba(0, 0, 0, 0.1);
+  transition: all 1.5s;
+}
+.Intro-fonctioning .navbar-list-item a:hover {
+  background-color: #f2eafb;
+}
+.Intro-fonctioning .navbar-list-item a:hover i {
+  color: #9356DC;
 }
 .Intro-fonctioning .navbar-list-item span {
   position: absolute;
@@ -136,6 +125,7 @@ body {
 .Intro-fonctioning .navbar-list-item i {
   flex: 1;
   text-align: center;
+  transition: all 1.5s;
 }
 .Intro-fonctioning .navbar-list-item h3 {
   flex: 4;
@@ -167,6 +157,7 @@ body {
   position: relative;
   border-radius: 15px;
   background-color: #fff;
+  box-shadow: 0px 4px 7px 2px rgba(0, 0, 0, 0.1);
 }
 .rest-list-item img {
   width: 100%;
@@ -178,7 +169,7 @@ body {
 .rest-list-info-wrap {
   display: flex;
   justify-content: space-between;
-  padding: 0 25px 0 12px;
+  padding: 0 25px 11px 12px;
 }
 .rest-list-info {
   display: flex;
@@ -188,13 +179,27 @@ body {
 .rest-list-likes {
   font-size: 20px;
   position: relative;
+  height: 20px;
+  background-clip: padding-box;
+}
+.rest-list-likes:hover .like {
+  opacity: 1;
+}
+.rest-list-likes:hover .like-stroke {
+  opacity: 0;
 }
 .rest-list-likes .like {
   opacity: 0;
+  background: linear-gradient(to right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.5s;
 }
 .rest-list-likes .like-stroke {
   position: absolute;
   left: 0;
+  transition: all 0.5s;
 }
 .rest-list .newTag {
   font-size: 12px;
@@ -206,4 +211,33 @@ body {
   color: #278870;
   font-weight: bold;
   border-radius: 3px;
+  box-shadow: 0px 4px 7px 2px rgba(0, 0, 0, 0.1);
+}
+
+/************* footer ***************/
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: #fff;
+  background-color: #353535;
+  padding: 12px 0 35px 24px;
+}
+.footer-title {
+  font-size: 18px;
+}
+.footer-navbar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-navbar .nav-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 10px;
+}
+.footer-navbar .nav-list a {
+  display: flex;
+  gap: 12px;
 }
