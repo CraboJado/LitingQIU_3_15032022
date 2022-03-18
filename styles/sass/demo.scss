@@ -1,0 +1,16 @@
+@use "./partials/base";
+@use "./partials/var";
+@use "./partials/mixin";
+
+
+
+@include mixin.article-menu(desserts);
+@include mixin.article-menu(dishes);
+@include mixin.article-menu;
+
+
+
+
+
+
+  
