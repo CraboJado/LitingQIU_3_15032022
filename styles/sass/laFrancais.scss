@@ -3,6 +3,8 @@
 @use "./partials/mixin";
 
 
+@include mixin.placeholders-mobile;
+
 /************* Header *************/
 
 @include mixin.header-menu;

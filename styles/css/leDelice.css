@@ -11,22 +11,22 @@ body {
   font-family: "Shrikhand", cursive;
 }
 
-.menu-desserts, .menu-dishes, .menu-starters {
+.menu-starters, .menu-dishes, .menu-desserts {
   display: flex;
   flex-direction: column;
   gap: 22px;
   opacity: 0;
 }
 
-.menu-desserts-title, .menu-dishes-title, .menu-starters-title {
+.menu-starters-title, .menu-dishes-title, .menu-desserts-title {
   font-size: 12px;
   font-weight: normal;
   text-transform: uppercase;
 }
-.menu-desserts-title span, .menu-dishes-title span, .menu-starters-title span {
+.menu-starters-title span, .menu-dishes-title span, .menu-desserts-title span {
   position: relative;
 }
-.menu-desserts-title span::before, .menu-dishes-title span::before, .menu-starters-title span::before {
+.menu-starters-title span::before, .menu-dishes-title span::before, .menu-desserts-title span::before {
   content: "";
   width: 100%;
   height: 3px;
@@ -35,14 +35,14 @@ body {
   bottom: -9px;
 }
 
-.menu-desserts-list, .menu-dishes-list, .menu-starters-list {
+.menu-starters-list, .menu-dishes-list, .menu-desserts-list {
   padding: 0;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.menu-desserts-list-item, .menu-dishes-list-item, .menu-starters-list-item {
+.menu-starters-list-item, .menu-dishes-list-item, .menu-desserts-list-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,31 +55,31 @@ body {
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
 }
 
-.menu-desserts-desc, .menu-dishes-desc, .menu-starters-desc {
+.menu-starters-desc, .menu-dishes-desc, .menu-desserts-desc {
   display: flex;
   flex-direction: column;
   gap: 7px;
+  width: 80%;
 }
-.menu-desserts-desc h3, .menu-dishes-desc h3, .menu-starters-desc h3, .menu-desserts-desc p, .menu-dishes-desc p, .menu-starters-desc p {
+.menu-starters-desc h3, .menu-dishes-desc h3, .menu-desserts-desc h3, .menu-starters-desc p, .menu-dishes-desc p, .menu-desserts-desc p {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
-.menu-desserts-price, .menu-dishes-price, .menu-starters-price {
+.menu-starters-price, .menu-dishes-price, .menu-desserts-price {
   display: flex;
-  gap: 20px;
   font-weight: bold;
 }
-.menu-desserts-price .price, .menu-dishes-price .price, .menu-starters-price .price {
+.menu-starters-price .price, .menu-dishes-price .price, .menu-desserts-price .price {
   align-self: end;
   padding-bottom: 12px;
-  transform: translateX(52px);
+  transform: translateX(0);
   transition: all 1s, ease;
 }
-.menu-desserts-price .select, .menu-dishes-price .select, .menu-starters-price .select {
+.menu-starters-price .select, .menu-dishes-price .select, .menu-desserts-price .select {
   height: 68px;
-  width: 52px;
+  width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,15 +90,17 @@ body {
   transform: translateX(52px);
   transition: all 1s, ease;
 }
-.menu-desserts-price .select i, .menu-dishes-price .select i, .menu-starters-price .select i {
+.menu-starters-price .select i, .menu-dishes-price .select i, .menu-desserts-price .select i {
   transition: all 0.5s, ease;
 }
 
-.menu-desserts-list-item:hover .menu-desserts-price > .select, .menu-dishes-list-item:hover .menu-dishes-price > .select, .menu-starters-list-item:hover .menu-starters-price > .select,
-.menu-desserts-list-item:hover .menu-desserts-price > .price,
-.menu-dishes-list-item:hover .menu-dishes-price > .price,
-.menu-starters-list-item:hover .menu-starters-price > .price {
+.menu-starters-list-item:hover .menu-starters-price > .select, .menu-dishes-list-item:hover .menu-dishes-price > .select, .menu-desserts-list-item:hover .menu-desserts-price > .select {
+  width: 52px;
   transform: translateX(0);
+}
+.menu-starters-list-item:hover .menu-starters-price > .price, .menu-dishes-list-item:hover .menu-dishes-price > .price, .menu-desserts-list-item:hover .menu-desserts-price > .price {
+  transform: translateX(0);
+  padding-right: 20px;
 }
 @-webkit-keyframes rotate {
   from {
@@ -116,7 +118,7 @@ body {
     transform: rotate(360deg);
   }
 }
-.menu-desserts-list-item:hover .menu-desserts-price > .select i, .menu-dishes-list-item:hover .menu-dishes-price > .select i, .menu-starters-list-item:hover .menu-starters-price > .select i {
+.menu-starters-list-item:hover .menu-starters-price > .select i, .menu-dishes-list-item:hover .menu-dishes-price > .select i, .menu-desserts-list-item:hover .menu-desserts-price > .select i {
   -webkit-animation-name: rotate;
           animation-name: rotate;
   -webkit-animation-duration: 1s;
@@ -129,7 +131,7 @@ body {
           animation-fill-mode: forwards;
 }
 
-.menu-desserts-list-item:hover .menu-desserts-desc, .menu-dishes-list-item:hover .menu-dishes-desc, .menu-starters-list-item:hover .menu-starters-desc {
+.menu-starters-list-item:hover .menu-starters-desc, .menu-dishes-list-item:hover .menu-dishes-desc, .menu-desserts-list-item:hover .menu-desserts-desc {
   width: 68%;
 }
 

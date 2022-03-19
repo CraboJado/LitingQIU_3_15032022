@@ -2,6 +2,7 @@
 @use "./partials/var";
 @use "./partials/mixin";
 
+@include mixin.placeholders-mobile;
 
 /************* Header *************/
 

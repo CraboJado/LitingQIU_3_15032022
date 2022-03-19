@@ -59,6 +59,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 7px;
+  width: 80%;
 }
 .menu-starters-desc h3, .menu-dishes-desc h3, .menu-desserts-desc h3, .menu-starters-desc p, .menu-dishes-desc p, .menu-desserts-desc p {
   white-space: nowrap;
@@ -68,18 +69,17 @@ body {
 
 .menu-starters-price, .menu-dishes-price, .menu-desserts-price {
   display: flex;
-  gap: 20px;
   font-weight: bold;
 }
 .menu-starters-price .price, .menu-dishes-price .price, .menu-desserts-price .price {
   align-self: end;
   padding-bottom: 12px;
-  transform: translateX(52px);
+  transform: translateX(0);
   transition: all 1s, ease;
 }
 .menu-starters-price .select, .menu-dishes-price .select, .menu-desserts-price .select {
   height: 68px;
-  width: 52px;
+  width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,11 +94,13 @@ body {
   transition: all 0.5s, ease;
 }
 
-.menu-starters-list-item:hover .menu-starters-price > .select, .menu-dishes-list-item:hover .menu-dishes-price > .select, .menu-desserts-list-item:hover .menu-desserts-price > .select,
-.menu-starters-list-item:hover .menu-starters-price > .price,
-.menu-dishes-list-item:hover .menu-dishes-price > .price,
-.menu-desserts-list-item:hover .menu-desserts-price > .price {
+.menu-starters-list-item:hover .menu-starters-price > .select, .menu-dishes-list-item:hover .menu-dishes-price > .select, .menu-desserts-list-item:hover .menu-desserts-price > .select {
+  width: 52px;
   transform: translateX(0);
+}
+.menu-starters-list-item:hover .menu-starters-price > .price, .menu-dishes-list-item:hover .menu-dishes-price > .price, .menu-desserts-list-item:hover .menu-desserts-price > .price {
+  transform: translateX(0);
+  padding-right: 20px;
 }
 @-webkit-keyframes rotate {
   from {
