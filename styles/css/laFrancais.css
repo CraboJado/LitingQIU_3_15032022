@@ -11,10 +11,6 @@ body {
   font-family: "Shrikhand", cursive;
 }
 
-.banner img {
-  width: 100%;
-}
-
 /************* Header *************/
 .header {
   display: flex;
@@ -60,6 +56,17 @@ main {
 }
 .menu-title-icon {
   font-size: 20px;
+  cursor: pointer;
+}
+.menu-title-icon::before {
+  transition: background 0.5s ease;
+}
+.menu-title-icon:hover::before {
+  font-weight: bold;
+  background: linear-gradient(to right, #FF79DA, #9356DC);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 .menu-content-wrap {
   display: flex;
@@ -78,6 +85,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 22px;
+  opacity: 0;
 }
 
 .menu-starters-title, .menu-dishes-title, .menu-desserts-title {
@@ -137,7 +145,7 @@ main {
   align-self: end;
   padding-bottom: 12px;
   transform: translateX(52px);
-  transition: all 1s ease;
+  transition: all 1s, ease;
 }
 .menu-starters-price .select, .menu-dishes-price .select, .menu-desserts-price .select {
   height: 68px;
@@ -150,10 +158,10 @@ main {
   color: white;
   border-radius: 0 10px 10px 0;
   transform: translateX(52px);
-  transition: all 1s ease;
+  transition: all 1s, ease;
 }
 .menu-starters-price .select i, .menu-dishes-price .select i, .menu-desserts-price .select i {
-  transition: all 0.5s ease;
+  transition: all 0.5s, ease;
 }
 
 .menu-starters-list-item:hover .menu-starters-price > .select, .menu-dishes-list-item:hover .menu-dishes-price > .select, .menu-desserts-list-item:hover .menu-desserts-price > .select,
@@ -179,8 +187,16 @@ main {
   }
 }
 .menu-starters-list-item:hover .menu-starters-price > .select i, .menu-dishes-list-item:hover .menu-dishes-price > .select i, .menu-desserts-list-item:hover .menu-desserts-price > .select i {
-  -webkit-animation: rotate 1s ease;
-          animation: rotate 1s ease;
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .menu-starters-list-item:hover .menu-starters-desc, .menu-dishes-list-item:hover .menu-dishes-desc, .menu-desserts-list-item:hover .menu-desserts-desc {
@@ -191,6 +207,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 22px;
+  opacity: 0;
 }
 
 .menu-starters-title, .menu-dishes-title, .menu-desserts-title {
@@ -250,7 +267,7 @@ main {
   align-self: end;
   padding-bottom: 12px;
   transform: translateX(52px);
-  transition: all 1s ease;
+  transition: all 1s, ease;
 }
 .menu-starters-price .select, .menu-dishes-price .select, .menu-desserts-price .select {
   height: 68px;
@@ -263,10 +280,10 @@ main {
   color: white;
   border-radius: 0 10px 10px 0;
   transform: translateX(52px);
-  transition: all 1s ease;
+  transition: all 1s, ease;
 }
 .menu-starters-price .select i, .menu-dishes-price .select i, .menu-desserts-price .select i {
-  transition: all 0.5s ease;
+  transition: all 0.5s, ease;
 }
 
 .menu-starters-list-item:hover .menu-starters-price > .select, .menu-dishes-list-item:hover .menu-dishes-price > .select, .menu-desserts-list-item:hover .menu-desserts-price > .select,
@@ -284,8 +301,16 @@ main {
   }
 }
 .menu-starters-list-item:hover .menu-starters-price > .select i, .menu-dishes-list-item:hover .menu-dishes-price > .select i, .menu-desserts-list-item:hover .menu-desserts-price > .select i {
-  -webkit-animation: rotate 1s ease;
-          animation: rotate 1s ease;
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .menu-starters-list-item:hover .menu-starters-desc, .menu-dishes-list-item:hover .menu-dishes-desc, .menu-desserts-list-item:hover .menu-desserts-desc {
@@ -296,6 +321,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 22px;
+  opacity: 0;
 }
 
 .menu-starters-title, .menu-desserts-title, .menu-dishes-title {
@@ -355,7 +381,7 @@ main {
   align-self: end;
   padding-bottom: 12px;
   transform: translateX(52px);
-  transition: all 1s ease;
+  transition: all 1s, ease;
 }
 .menu-starters-price .select, .menu-desserts-price .select, .menu-dishes-price .select {
   height: 68px;
@@ -368,10 +394,10 @@ main {
   color: white;
   border-radius: 0 10px 10px 0;
   transform: translateX(52px);
-  transition: all 1s ease;
+  transition: all 1s, ease;
 }
 .menu-starters-price .select i, .menu-desserts-price .select i, .menu-dishes-price .select i {
-  transition: all 0.5s ease;
+  transition: all 0.5s, ease;
 }
 
 .menu-starters-list-item:hover .menu-starters-price > .select, .menu-desserts-list-item:hover .menu-desserts-price > .select, .menu-dishes-list-item:hover .menu-dishes-price > .select,
@@ -389,8 +415,16 @@ main {
   }
 }
 .menu-starters-list-item:hover .menu-starters-price > .select i, .menu-desserts-list-item:hover .menu-desserts-price > .select i, .menu-dishes-list-item:hover .menu-dishes-price > .select i {
-  -webkit-animation: rotate 1s ease;
-          animation: rotate 1s ease;
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .menu-starters-list-item:hover .menu-starters-desc, .menu-desserts-list-item:hover .menu-desserts-desc, .menu-dishes-list-item:hover .menu-dishes-desc {
@@ -419,23 +453,45 @@ main {
   }
 }
 .menu-starters {
-  opacity: 0;
-  -webkit-animation: slideDown 1s ease forwards;
-          animation: slideDown 1s ease forwards;
+  -webkit-animation-name: slideDown;
+          animation-name: slideDown;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .menu-dishes {
-  opacity: 0;
-  -webkit-animation: slideDown 1s ease 1s forwards;
-          animation: slideDown 1s ease 1s forwards;
+  -webkit-animation-name: slideDown;
+          animation-name: slideDown;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .menu-desserts {
-  opacity: 0;
-  -webkit-animation: slideDown 1s ease 2s forwards;
-          animation: slideDown 1s ease 2s forwards;
+  -webkit-animation-name: slideDown;
+          animation-name: slideDown;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
+/****************Footer*************/
 .footer {
   display: flex;
   flex-direction: column;

@@ -1,68 +1,146 @@
 @use "./var";
 
 
-@mixin reset-list {
-    margin:0;
-}
-
-@mixin footer {
-    .footer {
-        display: flex;
-        flex-direction: column;
-        gap:16px;
-        color:#fff;
-        background-color:#353535;
-        padding:12px 0 35px 24px;
-    
-        &-title {
-            font-size: 18px;
-        }
-    
-        @at-root &-navbar {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-    
-            .nav-list {
-                display: flex;
-                flex-direction: column;
-                padding:0;
-                gap: 10px;
-            }
-    
-            .nav-list a {
-                display: flex;
-                gap:12px;
-            }
-    
-        }
-    
-    }
-};
+// @mixin reset-list {
+//     margin:0;
+// }
 
 @mixin shadow {
     box-shadow: 0px 4px 7px 2px rgba(0,0,0,0.1);
 }
 
-@mixin transition ($time:1.5s){
-    transition: all $time;
-}
-
-
-@mixin keyframe-rotate {
-
-    @keyframes rotate {
-        from {transform: rotate(0deg);}
-        to {transform: rotate(360deg);}
-    }
-}
-
-@mixin animation-rotate {
-    animation: rotate 1s ease;
+@mixin transition ($time:1.5s,$function:ease){
+    transition: all $time,$function;
 }
 
 @mixin menu-shadow {
     box-shadow: 0px 0px 10px 1px rgba(0,0,0,.1);
+}
+
+@mixin keyframe($animation-name){
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation(
+        $name,
+        $time:1s,
+        $function:ease,
+        $delay:0,
+        $mode:forwards) {
+
+        animation-name: $name;
+        animation-duration: $time;
+        animation-timing-function: $function;
+        animation-delay: $delay;
+        animation-fill-mode: $mode;
+}
+
+@mixin menu-type-animation {
+
+    @include keyframe(slideDown) {
+        from {
+            transform: translateY(-20%);
+            opacity: 0;
+         }
+     
+         to {
+             transform: translateY(0);
+             opacity: 1;
+         }
+    }
+    .menu-starters {
+        @include animation(slideDown);
+    }
+    
+    .menu-dishes {
+        @include animation(slideDown,$delay:1s);
+    }
+    
+    .menu-desserts {
+        @include animation(slideDown,$delay:2s);
+    }
+}
+
+@mixin header-menu {
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:18px 0;
+        position: relative;
+    
+        i {
+            position: absolute;
+            left: 21px;
+        }
+    }
+}
+
+@mixin main-menu {
+    main {
+        background-color: var.$bcg-color;
+    
+        @at-root .banner img{
+            width: 100%;
+            object-fit: cover;
+        }
+    
+        @at-root .menu {
+            background-color: var.$bcg-color;
+            padding:34px 15px 16px 15px;
+            border-radius: 51px;
+            display: flex;
+            flex-direction: column;
+            gap:40px;
+            position: relative;
+            top:-56px;
+    
+            &-title-wrap {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-right: 20px;
+            }
+    
+            &-title {
+                font-size: 26px;
+                margin: 0;
+            }
+    
+            &-title-icon {
+                font-size: 20px;
+                cursor: pointer;
+
+                &::before{
+                    transition: background .5s ease;
+                }
+
+                &:hover::before{
+                    font-weight: bold;
+                    background: linear-gradient(to right,var.$secondary-color,var.$primary-color);
+                    -webkit-text-fill-color:transparent;
+                    background-clip: text;
+                }
+
+            }
+    
+            &-content-wrap {
+                display: flex;
+                flex-direction: column;
+                gap:42px;
+            }
+    
+            .order-btn {
+                padding:16px 49px;
+                border-radius: 25px;
+                background: linear-gradient(to bottom,var.$secondary-color,var.$primary-color);
+                align-self: center;
+                color:#fff;
+            }
+        }
+    }
 }
 
 @mixin placeholders-mobile {
@@ -70,6 +148,8 @@
         display: flex;
         flex-direction: column;
         gap:22px;
+        opacity: 0;
+
     }
     
     %menu-type-title {
@@ -134,7 +214,7 @@
             align-self: end;
             padding-bottom: 12px;
             transform: translateX(52px);
-            transition: all 1s ease;
+            @include transition($time:1s)
         }
     
         .select {
@@ -148,10 +228,12 @@
             color: white;
             border-radius: 0 10px 10px 0;
             transform: translateX(52px);
-            transition: all 1s ease;
+           
+            @include transition($time:1s);
         }
         .select i {
-            transition: all .5s ease; 
+            @include transition($time:0.5s);
+          
         }
     }
     
@@ -161,10 +243,13 @@
             transform: translateX(0);
         }
     
-        @include keyframe-rotate;
+        @include keyframe(rotate) {
+            from {transform: rotate(0deg);}
+            to {transform: rotate(360deg);}
+        };
         
         >.select i {
-            @include animation-rotate;
+            @include animation(rotate);
         }
     }
 
@@ -213,6 +298,41 @@
         }
     }
 }
+
+@mixin footer {
+    .footer {
+        display: flex;
+        flex-direction: column;
+        gap:16px;
+        color:#fff;
+        background-color:#353535;
+        padding:12px 0 35px 24px;
+    
+        &-title {
+            font-size: 18px;
+        }
+    
+        @at-root &-navbar {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+    
+            .nav-list {
+                display: flex;
+                flex-direction: column;
+                padding:0;
+                gap: 10px;
+            }
+    
+            .nav-list a {
+                display: flex;
+                gap:12px;
+            }
+    
+        }
+    
+    }
+};
 
 
 

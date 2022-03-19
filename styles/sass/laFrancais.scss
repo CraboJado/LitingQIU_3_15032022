@@ -2,105 +2,21 @@
 @use "./partials/var";
 @use "./partials/mixin";
 
-.banner img{
-    width: 100%;
-}
 
 /************* Header *************/
-.header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding:18px 0;
-    position: relative;
 
-    i {
-        position: absolute;
-        left: 21px;
-    }
-}
+@include mixin.header-menu;
 
 /****************Main*************/
-main {
-    background-color: var.$bcg-color;
 
-    @at-root .banner img{
-        width: 100%;
-        object-fit: cover;
-    }
-
-    @at-root .menu {
-        background-color: var.$bcg-color;
-        padding:34px 15px 16px 15px;
-        border-radius: 51px;
-        display: flex;
-        flex-direction: column;
-        gap:40px;
-        position: relative;
-        top:-56px;
-
-        &-title-wrap {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-right: 20px;
-        }
-
-        &-title {
-            font-size: 26px;
-            margin: 0;
-        }
-
-        &-title-icon {
-            font-size: 20px;
-        }
-
-        &-content-wrap {
-            display: flex;
-            flex-direction: column;
-            gap:42px;
-        }
-
-        .order-btn {
-            padding:16px 49px;
-            border-radius: 25px;
-            background: linear-gradient(to bottom,var.$secondary-color,var.$primary-color);
-            align-self: center;
-            color:#fff;
-        }
-    }
-}
-
+@include mixin.main-menu;
 @include mixin.article-menu(desserts);
 @include mixin.article-menu(dishes);
 @include mixin.article-menu;
 
-@keyframes slideDown {
-    from {
-       transform: translateY(-20%);
-       opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
+@include mixin.menu-type-animation;
 
 
-.menu-starters {
-    opacity: 0;
-    animation: slideDown 1s ease forwards;
-}
-
-.menu-dishes {
-    opacity: 0;
-    animation: slideDown 1s ease 1s forwards;
-}
-
-.menu-desserts {
-    opacity: 0;
-    animation: slideDown 1s ease 2s forwards;
-}
+/****************Footer*************/
 
 @include mixin.footer;
