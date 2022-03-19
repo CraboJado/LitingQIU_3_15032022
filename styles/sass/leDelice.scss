@@ -1,0 +1,22 @@
+@use "./partials/base";
+@use "./partials/var";
+@use "./partials/mixin";
+
+
+/************* Header *************/
+
+@include mixin.header-menu;
+
+/****************Main*************/
+
+@include mixin.main-menu;
+@include mixin.article-menu(desserts);
+@include mixin.article-menu(dishes);
+@include mixin.article-menu;
+
+@include mixin.menu-type-animation;
+
+
+/****************Footer*************/
+
+@include mixin.footer;
