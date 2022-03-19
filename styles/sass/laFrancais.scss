@@ -2,8 +2,9 @@
 @use "./partials/var";
 @use "./partials/mixin";
 
+@include mixin.btn-placeholder;
+@include mixin.menu-placeholders-mobile;
 
-@include mixin.placeholders-mobile;
 
 /************* Header *************/
 
