@@ -150,7 +150,6 @@
         flex-direction: column;
         gap:22px;
         opacity: 0;
-
     }
     
     %menu-type-title {
@@ -259,9 +258,8 @@
     }
 }
 
-@mixin article-menu ($menu-type:starters) {
 
-    @include placeholders-mobile;
+@mixin article-menu ($menu-type:starters) {
 
     .menu-#{$menu-type} {
         @extend %menu-type;
