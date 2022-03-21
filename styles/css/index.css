@@ -59,17 +59,21 @@ body {
 @-webkit-keyframes disappear {
   0% {
     opacity: 1;
+    z-index: 2;
   }
   100% {
     opacity: 0;
+    z-index: -1;
   }
 }
 @keyframes disappear {
   0% {
     opacity: 1;
+    z-index: 2;
   }
   100% {
     opacity: 0;
+    z-index: -1;
   }
 }
 @-webkit-keyframes show {
@@ -387,6 +391,7 @@ body {
 }
 
 /************* Media Query ************/
+/*********** for tablette ************/
 @media only screen and (min-width :767.98px) {
   /********* Header **********/
   .header {
@@ -452,5 +457,55 @@ body {
     flex-direction: row;
     flex: 2;
     justify-content: space-around;
+  }
+}
+/********** for desktop *************/
+@media only screen and (min-width :991.98px) {
+  body {
+    max-width: 1440px;
+    margin: auto;
+  }
+
+  /********** Header *********/
+  .header {
+    background-color: unset;
+  }
+
+  /********** section Intro *********/
+  .Intro {
+    flex-direction: column;
+    padding: 0 0 0px;
+  }
+  .Intro-discover {
+    background-color: #f6f6f6;
+  }
+  .Intro-fonctioning h2 {
+    align-self: flex-start;
+    font-size: 20px;
+  }
+  .Intro-fonctioning .navbar-list {
+    flex-direction: row;
+    gap: 64px;
+  }
+  .Intro-fonctioning .navbar-list-item {
+    flex: 1;
+  }
+
+  /********** section rest *********/
+  .rest-list-item a {
+    height: 300px;
+  }
+
+  .rest-list-item img {
+    flex: 1;
+  }
+
+  /********** footer *********/
+  .footer {
+    gap: 0;
+  }
+  .footer-title {
+    text-align: center;
+    font-size: 30px;
   }
 }
