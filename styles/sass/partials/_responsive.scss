@@ -1,5 +1,5 @@
-$medium:768px!default;
-$large:992px!default;
+$medium:767.98px!default;
+$large:991.98px!default;
 
 $medium-up:"only screen and (min-width :#{$medium})";
 $medium-down:"only screen and (max-width :#{$medium})";
@@ -7,10 +7,10 @@ $large-up:"only screen and (min-width :#{$large})";
 $large-down:"only screen and (max-width :#{$large})";
 
 @mixin mediaQuery($width) {
-    @if $width == M {
+    @if $width == $medium {
         @media #{$medium-up} { @content; }
     }
-    @else if $width == L {
+    @else if $width == $large {
         @media #{$large-up} { @content; }
     }
 
