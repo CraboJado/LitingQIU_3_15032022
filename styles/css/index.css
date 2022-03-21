@@ -23,6 +23,145 @@ body {
   background: linear-gradient(#ff93e1, #a16be0);
 }
 
+@-webkit-keyframes animateC {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animateC {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes animate-ball {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+@keyframes animate-ball {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+@-webkit-keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.loading {
+  width: 100%;
+  background-color: #f5efef;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  -webkit-animation: disappear 3s linear forwards;
+          animation: disappear 3s linear forwards;
+}
+.ring {
+  width: 150px;
+  height: 150px;
+  background: transparent;
+  border: 3px solid #99E2D0;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 150px;
+  font-size: 18px;
+  color: #9356DC;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #FF79DA;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+.ring::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-top: 3px solid #9356DC;
+  border-right: 3px solid #FF79DA;
+  border-radius: 50%;
+  -webkit-animation: animateC 2s linear infinite;
+          animation: animateC 2s linear infinite;
+}
+.ring span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  height: 4px;
+  background: transparent;
+  transform-origin: right;
+  -webkit-animation: animate-ball 2s linear infinite;
+          animation: animate-ball 2s linear infinite;
+}
+.ring span::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(#FF79DA, #99E2D0, #9356DC);
+  top: -6px;
+  left: -8px;
+  box-shadow: 0 0 20px #99E2D0;
+  -webkit-animation: animate-ball 2s linear infinite;
+          animation: animate-ball 2s linear infinite;
+}
+
+.show {
+  opacity: 0;
+  -webkit-animation: show 0.5s linear 2s forwards;
+          animation: show 0.5s linear 2s forwards;
+}
+
 /************* Header **************/
 .header {
   display: flex;

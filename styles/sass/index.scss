@@ -4,6 +4,118 @@
 
 @include mixin.btn-placeholder;
 
+@include mixin.keyframe (animateC){
+    0% {
+        transform:rotate(0deg);
+    }
+  
+    100% {
+        transform:rotate(360deg);
+    }
+}
+
+@include mixin.keyframe(animate-ball) {
+    0%{
+        transform:rotate(45deg);
+    }
+    100%{
+        transform:rotate(405deg);
+    }
+}
+
+@include mixin.keyframe(disappear) {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@include mixin.keyframe(show) {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.loading {
+ width:100%;
+ background-color: rgb(245, 239, 239);
+ position: fixed;
+ top: 0;
+ bottom: 0;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ z-index: 2;
+ animation: disappear 3s linear forwards;
+
+    @at-root .ring {
+        width:150px;
+        height:150px;
+        background:transparent;
+        border:3px solid #99E2D0;
+        border-radius:50%;
+        text-align:center;
+        line-height:150px;
+        font-size:18px;
+        color:#9356DC;
+        letter-spacing:4px;
+        text-transform:uppercase;
+        text-shadow:0 0 10px #FF79DA;
+        box-shadow:0 0 20px rgba(0,0,0,.5);
+        position: relative;
+
+        &::before {
+            content:'';
+            position:absolute;
+            top:-3px;
+            left:-3px;
+            width:100%;
+            height:100%;
+            border:3px solid transparent;
+            border-top:3px solid #9356DC;
+            border-right:3px solid #FF79DA;
+            border-radius:50%;
+            animation:animateC 2s linear infinite;
+        }
+
+        span {
+            display:block;
+            position:absolute;
+            top:50%;
+            width:50%;
+            height:4px;
+            background:transparent;
+            transform-origin:right;
+            animation:animate-ball 2s linear infinite;
+
+            &::before {
+                content:'';
+                position:absolute;
+                width:16px;
+                height:16px;
+                border-radius:50%;
+                background:linear-gradient(#FF79DA,#99E2D0,#9356DC);
+                top:-6px;
+                left:-8px;
+                box-shadow:0 0 20px #99E2D0;
+                animation:animate-ball 2s linear infinite;
+            }
+        }
+    }
+}
+
+.show {
+    opacity: 0;
+    animation: show .5s linear 2s forwards;
+}
+
 /************* Header **************/
 .header {
     display: flex;
