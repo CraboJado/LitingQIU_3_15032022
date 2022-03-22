@@ -64,10 +64,9 @@
 /************ For desktop ***********/
 
 @include responsive.mediaQuery(991.98px){
-    body {
-        max-width: 1440px;
-        margin: auto;
-    }
+
+    @include mixin.center-body;
+    
     /******* Header *********/
     .header-icon {
         display: none;
