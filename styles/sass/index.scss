@@ -422,28 +422,9 @@
 
     /******** Footer ***********/
 
-    .footer {
-        flex-direction: row;
-        align-items: center;
-        padding-top: 35px;
-
-        &-title {
-            flex:1;
-        }
-
-        &-navbar {
-            flex-direction: row;
-            flex:2;
-            justify-content: space-around;
-        }
-    }
-
-
-
-    
-
- 
+    @include mixin.footer-tablette;
 }
+
 
 /********** for desktop *************/
 @include responsive.mediaQuery(991.98px){
@@ -489,16 +470,7 @@
     }
 
     /********** footer *********/
-    .footer {
-        gap:0;
-        &-title {
-            text-align: center;
-            font-size: 30px;
-        }
-    }
-
-
-    
+    @include mixin.footer-desktop;
 }
  
 

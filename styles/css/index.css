@@ -452,6 +452,7 @@ body {
   }
   .footer-title {
     flex: 1;
+    font-size: 20px;
   }
   .footer-navbar {
     flex-direction: row;
