@@ -51,3 +51,45 @@
     /******** footer ********/
     @include mixin.footer-tablette
 }
+
+/************* for desktop ***************/
+
+@include responsive.mediaQuery(991.98px){
+    body {
+        max-width: 1440px;
+        margin: auto;
+    }
+    /******* Header *********/
+    .header-icon {
+        display: none;
+    }
+
+    /******* menu *********/
+    .menu-title-wrap {
+        padding:0 30px;
+    }
+
+    .menu-content-wrap {
+        flex-direction: row;
+        gap:0;
+        justify-content: space-between;
+    }
+
+    .menu-starters,
+    .menu-dishes,
+    .menu-desserts {
+        width:32%;
+        gap:30px;
+
+    }
+
+    .menu-starters-list-item, 
+    .menu-dishes-list-item, 
+    .menu-desserts-list-item {
+        width: 100%;
+    }
+    
+    /************* Footer *************/
+    @include mixin.footer-desktop;
+
+}
