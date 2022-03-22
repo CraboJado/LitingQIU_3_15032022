@@ -1,6 +1,7 @@
 @use "./partials/base";
 @use "./partials/var";
 @use "./partials/mixin";
+@use "./partials/responsive";
 
 @include mixin.btn-placeholder;
 @include mixin.menu-placeholders-mobile;
@@ -22,3 +23,74 @@
 /****************Footer*************/
 
 @include mixin.footer;
+
+/************** Media Query ***********/
+
+/************ For tablette ***********/
+@include responsive.mediaQuery(767.98px){
+    .banner img {
+        height:400px;
+    }
+    .menu-title-wrap {
+        padding: 0 30px;
+    }
+    .menu-content-wrap {
+        align-items: center;
+    }
+
+    .menu-starters, 
+    .menu-dishes, 
+    .menu-desserts {
+        width:70%;
+    }
+
+    .menu-starters-list-item, 
+    .menu-dishes-list-item, 
+    .menu-desserts-list-item {
+        padding:0 20px;
+    }
+
+    .menu-starters-list-item:hover .menu-starters-price > .select, 
+    .menu-dishes-list-item:hover .menu-dishes-price > .select, 
+    .menu-desserts-list-item:hover .menu-desserts-price > .select {
+        width:65px;
+        transform: translateX(20px);
+    }
+
+    /******** Footer *******/
+    @include mixin.footer-tablette;
+}
+
+/************ For desktop ***********/
+
+@include responsive.mediaQuery(991.98px){
+    body {
+        max-width: 1440px;
+        margin: auto;
+    }
+    /******* Header *********/
+    .header-icon {
+        display: none;
+    }
+
+    /******* Menu ***********/
+
+    .menu-content-wrap {
+        flex-direction: row;
+        align-items: flex-start;
+        gap:0;
+        justify-content: space-between;
+        padding:0 10px;
+    }
+
+    .menu-starters, 
+    .menu-dishes, 
+    .menu-desserts {
+        width:32%;
+    }
+
+    /******* footer ***********/
+
+    @include mixin.footer-desktop;
+
+}
