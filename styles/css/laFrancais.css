@@ -302,3 +302,41 @@ main {
   display: flex;
   gap: 12px;
 }
+
+/****************** Media Query ***************/
+/**************** for tablette ***************/
+@media only screen and (min-width :767.98px) {
+  .banner img {
+    height: 400px;
+  }
+
+  .menu-starters-list,
+.menu-dishes-list,
+.menu-desserts-list {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 29px;
+  }
+
+  .menu-starters-list-item,
+.menu-dishes-list-item,
+.menu-desserts-list-item {
+    width: 48%;
+  }
+
+  /******** footer ********/
+  .footer {
+    flex-direction: row;
+    align-items: center;
+    padding-top: 35px;
+  }
+  .footer-title {
+    flex: 1;
+    font-size: 20px;
+  }
+  .footer-navbar {
+    flex-direction: row;
+    flex: 2;
+    justify-content: space-around;
+  }
+}

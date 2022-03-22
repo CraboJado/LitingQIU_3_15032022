@@ -1,6 +1,7 @@
 @use "./partials/base";
 @use "./partials/var";
 @use "./partials/mixin";
+@use "./partials/responsive";
 
 @include mixin.btn-placeholder;
 @include mixin.menu-placeholders-mobile;
@@ -21,5 +22,32 @@
 
 
 /****************Footer*************/
-
 @include mixin.footer;
+
+
+/****************** Media Query ***************/
+/**************** for tablette ***************/
+
+@include responsive.mediaQuery(767.98px) {
+
+    .banner img {
+        height:400px;
+    }
+
+    .menu-starters-list,
+    .menu-dishes-list,
+    .menu-desserts-list {
+        flex-flow: row wrap;
+        justify-content: space-between;
+        gap: 29px;
+    }
+
+    .menu-starters-list-item, 
+    .menu-dishes-list-item, 
+    .menu-desserts-list-item {
+        width:48%;
+    }
+
+    /******** footer ********/
+    @include mixin.footer-tablette
+}
