@@ -371,5 +371,16 @@
     }
 }
 
+@mixin footer-desktop {
+    .footer {
+        gap:0;
+        &-title {
+            text-align: center;
+            font-size: 30px;
+        }
+    }
+
+}
+
 
 
