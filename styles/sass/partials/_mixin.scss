@@ -350,7 +350,26 @@
         }
     
     }
-};
+}
+
+@mixin footer-tablette {
+    .footer {
+        flex-direction: row;
+        align-items: center;
+        padding-top: 35px;
+
+        &-title {
+            flex:1;
+            font-size: 20px;
+        }
+
+        &-navbar {
+            flex-direction: row;
+            flex:2;
+            justify-content: space-around;
+        }
+    }
+}
 
 
 
