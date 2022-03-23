@@ -1,16 +1,16 @@
 @use "./partials/base";
 @use "./partials/var";
 @use "./partials/mixin";
+@use "./partials/responsive";
 
 @include mixin.btn-placeholder;
 @include mixin.menu-placeholders-mobile;
 
 /************* Header *************/
-
 @include mixin.header-menu;
 
-/****************Main*************/
 
+/****************Main*************/
 @include mixin.main-menu;
 @include mixin.article-menu(desserts);
 @include mixin.article-menu(dishes);
@@ -20,5 +20,17 @@
 
 
 /****************Footer*************/
-
 @include mixin.footer;
+
+
+/************** Media Query ***********/
+/************ For tablette ***********/
+@include responsive.mediaQuery(767.98px){
+    @include mixin.tablette-menuPage;
+}
+
+
+/************ For desktop ***********/
+@include responsive.mediaQuery(991.98px){
+    @include mixin.desktop-menuPage;
+}
