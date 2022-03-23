@@ -385,6 +385,12 @@ main {
     padding: 0 0 0 10px;
   }
 
+  .menu-starters-list-item:hover .menu-starters-price,
+.menu-dishes-list-item:hover .menu-dishes-price,
+.menu-desserts-list-item:hover .menu-desserts-price {
+    gap: 10px;
+  }
+
   .menu-starters-list-item:hover .menu-starters-price > .price,
 .menu-dishes-list-item:hover .menu-dishes-price > .price,
 .menu-desserts-list-item:hover .menu-desserts-price > .price {
