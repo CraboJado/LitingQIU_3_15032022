@@ -337,7 +337,6 @@ main {
     transform: translateX(20px);
   }
 
-  /******** Footer *******/
   .footer {
     flex-direction: row;
     align-items: center;
