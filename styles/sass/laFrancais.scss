@@ -29,66 +29,11 @@
 /**************** for tablette ***************/
 
 @include responsive.mediaQuery(767.98px) {
-
-    .banner img {
-        height:400px;
-    }
-
-    .menu-starters-list,
-    .menu-dishes-list,
-    .menu-desserts-list {
-        flex-flow: row wrap;
-        justify-content: space-between;
-        gap: 29px;
-    }
-
-    .menu-starters-list-item, 
-    .menu-dishes-list-item, 
-    .menu-desserts-list-item {
-        width:48%;
-    }
-
-    /******** footer ********/
-    @include mixin.footer-tablette
+    @include mixin.tablette-menuPage;
 }
 
 /************* for desktop ***************/
 
 @include responsive.mediaQuery(991.98px){
-
-    @include mixin.center-body;
-    
-    /******* Header *********/
-    .header-icon {
-        display: none;
-    }
-
-    /******* menu *********/
-    .menu-title-wrap {
-        padding:0 30px;
-    }
-
-    .menu-content-wrap {
-        flex-direction: row;
-        gap:0;
-        justify-content: space-between;
-    }
-
-    .menu-starters,
-    .menu-dishes,
-    .menu-desserts {
-        width:32%;
-        gap:30px;
-
-    }
-
-    .menu-starters-list-item, 
-    .menu-dishes-list-item, 
-    .menu-desserts-list-item {
-        width: 100%;
-    }
-    
-    /************* Footer *************/
-    @include mixin.footer-desktop;
-
+    @include mixin.desktop-menuPage;
 }
