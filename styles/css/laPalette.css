@@ -379,6 +379,26 @@ main {
     width: 32%;
   }
 
+  .menu-starters-list-item,
+.menu-dishes-list-item,
+.menu-desserts-list-item {
+    padding: 0 0 0 10px;
+  }
+
+  .menu-starters-list-item:hover .menu-starters-price > .price,
+.menu-dishes-list-item:hover .menu-dishes-price > .price,
+.menu-desserts-list-item:hover .menu-desserts-price > .price {
+    transform: translateX(-10px);
+    padding-right: 0;
+  }
+
+  .menu-starters-list-item:hover .menu-starters-price > .select,
+.menu-dishes-list-item:hover .menu-dishes-price > .select,
+.menu-desserts-list-item:hover .menu-desserts-price > .select {
+    width: 50px;
+    transform: translateX(0px);
+  }
+
   /******* footer ***********/
   .footer {
     gap: 0;
