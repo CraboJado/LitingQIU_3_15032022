@@ -303,38 +303,10 @@
              gap:5px;
          }
 
-         &-likes {
-            font-size: 20px;
-            position: relative;
-            height: 20px;
-            background-clip:padding-box;
-
-            &:hover{
-
-                .like {
-                    opacity: 1;
-                }
-
-                .like-stroke {
-                    opacity: 0;
-                }
-            }
-
-            .like {
-                opacity: 0;
-                background: linear-gradient(to right,var.$secondary-color,var.$primary-color);
-                background-clip: text;
-                -webkit-text-fill-color:transparent;
-                @include mixin.transition(.5s);
-            }
-
-            .like-stroke {
-                position: absolute;
-                left: 0;
-                @include mixin.transition(.5s);
-            }
-        }
-        
+         &-icon {
+             @include mixin.heart-icon;
+         }
+  
          .newTag {
             font-size: 12px;
             padding:6px 14px;

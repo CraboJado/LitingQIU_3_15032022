@@ -324,30 +324,19 @@ body {
   flex-direction: column;
   gap: 5px;
 }
-.rest-list-likes {
+.rest-list-icon {
   font-size: 20px;
-  position: relative;
-  height: 20px;
-  background-clip: padding-box;
+  cursor: pointer;
 }
-.rest-list-likes:hover .like {
-  opacity: 1;
+.rest-list-icon::before {
+  transition: background 0.5s ease;
 }
-.rest-list-likes:hover .like-stroke {
-  opacity: 0;
-}
-.rest-list-likes .like {
-  opacity: 0;
+.rest-list-icon:hover::before {
+  font-weight: bold;
   background: linear-gradient(to right, #FF79DA, #9356DC);
+  -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.5s, ease;
-}
-.rest-list-likes .like-stroke {
-  position: absolute;
-  left: 0;
-  transition: all 0.5s, ease;
 }
 .rest-list .newTag {
   font-size: 12px;

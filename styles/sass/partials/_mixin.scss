@@ -82,6 +82,23 @@
     }
 }
 
+@mixin heart-icon {
+
+    font-size: 20px;
+    cursor: pointer;
+
+    &::before{
+        transition: background .5s ease;
+    }
+
+    &:hover::before{
+        font-weight: bold;
+        background: linear-gradient(to right,var.$secondary-color,var.$primary-color);
+        -webkit-text-fill-color:transparent;
+        background-clip: text;
+    }
+}
+
 @mixin main-menu {
     main {
         background-color: var.$bcg-color;
@@ -115,20 +132,7 @@
             }
     
             &-title-icon {
-                font-size: 20px;
-                cursor: pointer;
-
-                &::before{
-                    transition: background .5s ease;
-                }
-
-                &:hover::before{
-                    font-weight: bold;
-                    background: linear-gradient(to right,var.$secondary-color,var.$primary-color);
-                    -webkit-text-fill-color:transparent;
-                    background-clip: text;
-                }
-
+                @include heart-icon;
             }
     
             &-content-wrap {
