@@ -160,7 +160,7 @@ body {
           animation: animate-ball 2s linear infinite;
 }
 
-.show {
+.content {
   opacity: 0;
   -webkit-animation: show 0.5s linear 2s forwards;
           animation: show 0.5s linear 2s forwards;
