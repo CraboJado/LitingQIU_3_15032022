@@ -214,6 +214,7 @@
                 align-items: center;
                 background-color: var.$bcg-color;
                 border-radius: 15px;
+                padding:0 20px;
                 @include mixin.shadow;
                 @include mixin.transition;
             
@@ -247,6 +248,7 @@
             }
 
             &-item h3 {
+                padding-left: 10px;
                 flex:4;
             }
         }
@@ -374,9 +376,11 @@
 
             .navbar-list-item a {
                 background-color: unset;
+                padding-left: 10px;
             }
 
             .navbar-list-item h3 {
+                padding-left: 0;
                 flex:2;
             };
         }
