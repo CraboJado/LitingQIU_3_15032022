@@ -111,8 +111,7 @@ body {
   transform: translateX(0);
 }
 .menu-starters-list-item:hover .menu-starters-price > .price, .menu-dishes-list-item:hover .menu-dishes-price > .price, .menu-desserts-list-item:hover .menu-desserts-price > .price {
-  transform: translateX(0);
-  padding-right: 20px;
+  transform: translateX(-20px);
 }
 @-webkit-keyframes rotate {
   from {
