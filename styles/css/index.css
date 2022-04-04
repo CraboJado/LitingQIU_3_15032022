@@ -94,7 +94,7 @@ body {
 }
 .loading {
   width: 100%;
-  background-color: #f5efef;
+  background-color: rgb(245, 239, 239);
   position: fixed;
   top: 0;
   bottom: 0;
@@ -327,16 +327,29 @@ body {
 .rest-list-icon {
   font-size: 20px;
   cursor: pointer;
+  position: relative;
 }
 .rest-list-icon::before {
-  transition: background 0.5s ease;
+  transition: opacity 0.5s ease;
 }
-.rest-list-icon:hover::before {
+.rest-list-icon::after {
+  content: "\f004";
+  font-family: "Font Awesome 6 Free";
   font-weight: bold;
   background: linear-gradient(to right, #FF79DA, #9356DC);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.rest-list-icon:hover::before {
+  opacity: 0;
+}
+.rest-list-icon:hover::after {
+  opacity: 1;
 }
 .rest-list .newTag {
   font-size: 12px;
