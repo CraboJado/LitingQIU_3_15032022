@@ -273,6 +273,7 @@ body {
 .Intro-fonctioning .navbar-list-item i {
   flex: 1;
   text-align: center;
+  color: #7e7e7e;
   transition: all 1.5s ease;
 }
 .Intro-fonctioning .navbar-list-item h3 {

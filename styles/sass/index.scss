@@ -241,6 +241,7 @@
             &-item i {
                 flex:1;
                 text-align: center;
+                color:#7e7e7e;
                 @include mixin.transition;
             }
 
