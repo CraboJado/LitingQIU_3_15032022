@@ -116,7 +116,7 @@
 
 .content {
     opacity: 0;
-    animation: show .5s linear 2s forwards;
+    animation: show .5s linear 3s forwards;
 }
 
 /************* Header **************/
@@ -215,7 +215,7 @@
                 border-radius: 15px;
                 @include mixin.shadow;
                 @include mixin.transition;
-                
+            
                 &:hover{
                     background-color: lighten(var.$primary-color, 35);
                     
