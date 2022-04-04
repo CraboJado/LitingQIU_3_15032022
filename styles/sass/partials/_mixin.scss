@@ -295,7 +295,7 @@
     }
 
     %hover-desc-width {
-        width:68%;
+        width:65%;
     }
 }
 
@@ -469,11 +469,11 @@
     // .menu-starters-desc h3, 
     // .menu-dishes-desc h3, 
     // .menu-desserts-desc h3, 
-    // .menu-starters-desc p, 
-    // .menu-dishes-desc p, 
-    // .menu-desserts-desc p {
-    //     font-size: 12px;
-    // }
+    .menu-starters-desc p, 
+    .menu-dishes-desc p, 
+    .menu-desserts-desc p {
+        font-size: 12px;
+    }
 
     .menu-starters-list-item:hover .menu-starters-price, 
     .menu-dishes-list-item:hover .menu-dishes-price, 

@@ -143,7 +143,7 @@ body {
 }
 
 .menu-starters-list-item:hover .menu-starters-desc, .menu-dishes-list-item:hover .menu-dishes-desc, .menu-desserts-list-item:hover .menu-desserts-desc {
-  width: 68%;
+  width: 65%;
 }
 
 /************* Header *************/
@@ -395,6 +395,12 @@ main {
 .menu-dishes-list-item,
 .menu-desserts-list-item {
     padding: 0 0 0 10px;
+  }
+
+  .menu-starters-desc p,
+.menu-dishes-desc p,
+.menu-desserts-desc p {
+    font-size: 12px;
   }
 
   .menu-starters-list-item:hover .menu-starters-price,
