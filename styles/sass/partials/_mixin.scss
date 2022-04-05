@@ -437,13 +437,13 @@
 
 @mixin desktop-menuPage {
     @include center-body;
+
     /******* Header *********/
     .header-icon {
         display: none;
     }
 
     /******* Menu ***********/
-
     .menu-content-wrap {
         flex-direction: row;
         align-items: flex-start;
@@ -489,8 +489,8 @@
         width: 50px;
         transform: translateX(0px);
     }
-    /******* footer ***********/
 
+    /******* footer ***********/
     @include footer-desktop;
 }
 
