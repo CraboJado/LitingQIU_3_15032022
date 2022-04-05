@@ -67,21 +67,6 @@
     }
 }
 
-@mixin header-menu {
-    .header {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding:18px 0;
-        position: relative;
-    
-        &-icon {
-            position: absolute;
-            left: 21px;
-        }
-    }
-}
-
 @mixin heart-icon {
 
     font-size: 20px;
@@ -111,6 +96,21 @@
 
     &:hover::after{
         opacity: 1;
+    }
+}
+
+@mixin header-menu {
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:18px 0;
+        position: relative;
+    
+        &-icon {
+            position: absolute;
+            left: 21px;
+        }
     }
 }
 
@@ -180,7 +180,6 @@
         }
     }
 }
-
 
 @mixin menu-placeholders-mobile {
     %menu-type {
@@ -298,7 +297,6 @@
         width:65%;
     }
 }
-
 
 @mixin article-menu ($menu-type:starters) {
 
